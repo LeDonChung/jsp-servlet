@@ -1,0 +1,28 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import com.laptrinhjavawed.dao.ICategoryDAO;
+import com.laptrinhjavawed.model.CategoryModel;
+import com.laptrinhjavawed.service.ICategoryService;
+
+public class CategoryService implements ICategoryService{
+
+	private ICategoryDAO categoryDAO;
+	public CategoryService() {
+		categoryDAO = new ICategoryDAO() {
+			
+			@Override
+			public List<CategoryModel> findAll() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+	}
+	@Override
+	public List<CategoryModel> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

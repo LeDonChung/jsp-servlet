@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.model.UserModel"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.INewDao"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.PreparableStatement"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.impl.CategoryDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.GenericDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.impl.AbstractDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.iml.NewDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.INewDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.service.impl.NewService"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.service.INewService"/>
+    <fullyQualifiedTypeName name="javax.inject.Inject"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalCallerException"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.service.ICategoryService"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.ICategoryDAO"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.result.Row"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.model.NewModel"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.IGenericDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.dao.iml.AbstractDAO"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.model.CategoryModel"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.mapper.RowMapper"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.mapper.CategoryMapper"/>
+    <fullyQualifiedTypeName name="com.laptrinhjavawed.mapper.NewMapper"/>
+    <fullyQualifiedTypeName name="org.jboss.weld.bootstrap.FastProcessAnnotatedTypeResolver"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+</qualifiedTypeNameHistroy>

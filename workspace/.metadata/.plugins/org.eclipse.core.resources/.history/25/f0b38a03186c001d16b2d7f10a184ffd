@@ -1,0 +1,19 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import com.laptrinhjavawed.model.CategoryModel;
+import com.laptrinhjavawed.service.ICategoryService;
+
+public class CategoryService implements ICategoryService {
+	@Inject
+	private ICategoryService iCategoryService;
+
+	@Override
+	public List<CategoryModel> findAll() {
+		return iCategoryService.findAll();
+	}
+
+}

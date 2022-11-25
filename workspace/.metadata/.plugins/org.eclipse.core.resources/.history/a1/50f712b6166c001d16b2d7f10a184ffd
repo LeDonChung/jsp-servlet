@@ -1,0 +1,5 @@
+package com.laptrinhjavawed.service;
+
+public interface ICategoryService {
+
+}

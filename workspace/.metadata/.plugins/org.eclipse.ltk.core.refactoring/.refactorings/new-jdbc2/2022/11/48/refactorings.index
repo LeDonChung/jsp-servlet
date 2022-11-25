@@ -1,0 +1,49 @@
+1668954308352	Delete element
+1668954316491	Delete elements
+1668954321407	Delete element
+1668954325546	Delete element
+1668954329776	Delete element
+1668955042904	Copy folder
+1668955047589	Delete element
+1668955485838	Delete element
+1668955574982	Move 'css' to 'wed'
+1668960327935	Rename resource 'decorators.xml'
+1668960492117	Rename resource 'decorator.xml'
+1668960559319	Delete element
+1668960617908	Rename resource 'wed'
+1668960643828	Rename resource 'wed.xml'
+1668960674521	Rename resource 'wed.jsp'
+1668960711425	Rename resource 'wed'
+1668960855408	Rename resource 'WED-INF'
+1668962865839	Delete element
+1668962867679	Delete element
+1669033075813	Copy folders
+1669033116090	Copy folders
+1669033321684	Copy file
+1669205983606	Delete element
+1669206035248	Delete element
+1669206081104	Delete element
+1669206222918	Delete element
+1669206430969	Delete element
+1669207874256	Rename type 'ICategoryDao'
+1669207881460	Rename type 'CategoryDao'
+1669209724773	Infer generic type arguments
+1669209749584	Infer generic type arguments
+1669214944243	Infer generic type arguments
+1669214953946	Infer generic type arguments
+1669215094642	Delete element
+1669215096660	Delete element
+1669215098755	Delete element
+1669215100335	Delete element
+1669221869951	Rename type 'INewDao'
+1669221978803	Rename type 'NewDao'
+1669299480004	Delete element
+1669307174706	Copy file
+1669307245908	Copy package
+1669308973736	Copy compilation unit
+1669352451617	Delete element
+1669352456590	Copy compilation unit
+1669352459309	Delete element
+1669354023544	Delete element
+1669354078215	Rename type 'HttpUtils'
+1669354605459	Encapsulate field 'value'

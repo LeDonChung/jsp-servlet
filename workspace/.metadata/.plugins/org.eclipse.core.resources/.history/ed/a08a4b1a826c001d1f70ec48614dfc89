@@ -1,0 +1,11 @@
+package com.laptrinhjavawed.utils;
+
+import java.io.BufferedReader;
+
+import com.opensymphony.module.sitemesh.filter.Buffer;
+
+public class HttpUtil {
+	public static HttpUtil of(BufferedReader reader) {
+		
+	}
+}

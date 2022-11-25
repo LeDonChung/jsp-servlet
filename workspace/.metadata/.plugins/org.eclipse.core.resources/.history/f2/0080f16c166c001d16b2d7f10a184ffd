@@ -1,0 +1,15 @@
+package com.laptrinhjavawed.dao.iml;
+
+import java.util.List;
+
+import com.laptrinhjavawed.dao.ICategoryDAO;
+import com.laptrinhjavawed.model.CategoryModel;
+
+public class CategoryDAO implements ICategoryDAO{
+
+	@Override
+	public List<CategoryModel> findAll() {
+		return null;
+	}
+
+}

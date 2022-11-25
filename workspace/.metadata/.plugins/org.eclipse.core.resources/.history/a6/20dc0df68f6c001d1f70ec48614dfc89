@@ -1,0 +1,28 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import com.laptrinhjavawed.dao.INewDAO;
+import com.laptrinhjavawed.model.NewModel;
+import com.laptrinhjavawed.service.INewService;
+
+public class NewService implements INewService{
+
+	@Inject
+	private INewDAO iNewDAO;
+	
+	@Override
+	public List<NewModel> findByCategoryId(long categoryID) {
+		return iNewDAO.findByCategoryId(categoryID);
+	}
+
+	@Override
+	public Long save(NewModel newModel) {
+		Long id = iNewDAO.save(newModel);
+		return iNewDAO.save(newModel);
+	}
+
+
+}

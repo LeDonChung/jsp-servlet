@@ -1,0 +1,5 @@
+package com.laptrinhjavawed.utils;
+
+public class HttpUtils {
+
+}

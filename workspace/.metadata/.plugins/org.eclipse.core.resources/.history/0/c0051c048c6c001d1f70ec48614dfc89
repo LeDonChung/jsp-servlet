@@ -1,0 +1,32 @@
+package com.laptrinhjavawed.utils;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+
+import com.opensymphony.module.sitemesh.filter.Buffer;
+
+public class HttpUtil {
+	private String value;
+	public HttpUtil(String value) {
+		this.setValue(value);
+	}
+	
+	public static HttpUtil of(BufferedReader reader) {
+		StringBuffer sb = new StringBuffer();
+		String line = "";
+		try {
+			while((line = reader.readLine()) != null) {
+				sb.append(line);
+			}
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		return new HttpUtil(sb.toString());
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
+	}
+}

@@ -1,0 +1,11 @@
+package com.laptrinhjavawed.dao;
+
+import java.util.List;
+
+import com.laptrinhjavawed.model.NewModel;
+
+public interface INewDAO extends GenericDAO<NewModel>{
+	List<NewModel> findByCategoryId(long categoryID);
+	Long save(NewModel newModel);
+	NewModel findOne(Long id);
+}

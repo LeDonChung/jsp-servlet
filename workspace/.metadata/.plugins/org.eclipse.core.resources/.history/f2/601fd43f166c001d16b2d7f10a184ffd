@@ -1,0 +1,15 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import com.laptrinhjavawed.model.NewModel;
+import com.laptrinhjavawed.service.INewService;
+
+public class NewService implements INewService{
+
+	@Override
+	public List<NewModel> findByCategoryId(long categoryId) {
+		return null;
+	}
+
+}

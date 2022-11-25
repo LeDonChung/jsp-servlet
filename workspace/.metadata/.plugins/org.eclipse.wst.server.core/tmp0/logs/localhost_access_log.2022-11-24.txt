@@ -1,0 +1,7 @@
+127.0.0.1 - - [24/Nov/2022:23:50:14 +0700] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:15 +0700] "GET /new_jsp_servlet/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:56 +0700] "GET /new_jsp_servlet/trang-chu;jsessionid=A3FD0C81550626F23F721A341E948898 HTTP/1.1" 200 4184
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:56 +0700] "GET /new_jsp_servlet/template/web/css/shop-item.css HTTP/1.1" 200 271
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:56 +0700] "GET /new_jsp_servlet/template/web/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 155758
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:56 +0700] "GET /new_jsp_servlet/template/web/jquery/jquery.min.js HTTP/1.1" 200 88145
+0:0:0:0:0:0:0:1 - - [24/Nov/2022:23:50:57 +0700] "GET /favicon.ico HTTP/1.1" 404 1085

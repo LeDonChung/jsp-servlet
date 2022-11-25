@@ -1,0 +1,43 @@
+package com.laptrinhjavawed.dao.impl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laptrinhjavawed.dao.INewDAO;
+import com.laptrinhjavawed.model.NewModel;
+
+public class NewDAO implements INewDAO {
+	
+	public Connection getConnection() {
+		try {
+			// load driver
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/new_servlet";
+			String userName = "root";
+			String password = "01082003";
+			return DriverManager.getConnection(url, userName, password);
+
+		} catch (ClassNotFoundException e) {
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}
+	}
+
+	@Override
+	public List<NewModel> findByCategoryId(long categoryID) {
+		List<NewModel> newModels = new ArrayList<>();
+		
+		Connection conn = getConnection();
+		String query = "SELECT *FROM news WHERE categoryid = ?";	
+		if(conn != null) {
+			
+		}
+		return null;
+	}
+
+}

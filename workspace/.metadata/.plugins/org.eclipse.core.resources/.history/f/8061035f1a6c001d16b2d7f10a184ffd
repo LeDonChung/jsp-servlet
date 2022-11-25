@@ -1,0 +1,25 @@
+package com.laptrinhjavawed.dao.iml;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laptrinhjavawed.dao.ICategoryDAO;
+import com.laptrinhjavawed.mapper.CategoryMapper;
+import com.laptrinhjavawed.mapper.RowMapper;
+import com.laptrinhjavawed.model.CategoryModel;
+
+public class CategoryDAO extends AbstractDAO<CategoryModel> implements ICategoryDAO{
+
+	
+	@Override
+	public List<CategoryModel> findAll() {
+		String sql = "SELECT *FROM category";
+		return query(sql, new CategoryMapper());
+	}
+
+}

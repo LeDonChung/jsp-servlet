@@ -1,0 +1,78 @@
+package com.laptrinhjavawed.dao.impl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laptrinhjavawed.dao.INewDAO;
+import com.laptrinhjavawed.model.NewModel;
+
+public class NewDAO implements INewDAO {
+
+	public Connection getConnection() {
+		try {
+			// load driver
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/new_servlet";
+			String userName = "root";
+			String password = "01082003";
+			return DriverManager.getConnection(url, userName, password);
+
+		} catch (ClassNotFoundException e) {
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}
+	}
+
+	@Override
+	public List<NewModel> findByCategoryId(long categoryID) {
+		List<NewModel> newModels = new ArrayList<>();
+
+		Connection conn = getConnection();
+		String query = "SELECT *FROM news WHERE categoryid = ?;";
+		PreparedStatement statement = null;
+		ResultSet rs = null;
+		if (conn != null) {
+			try {
+				statement = conn.prepareStatement(query);
+				statement.setLong(0, categoryID);
+				rs = statement.executeQuery();
+				while (rs.next()) {
+					NewModel newModel = new NewModel();
+					newModel.setId(rs.getLong("id"));
+					newModel.setCategoryId(rs.getLong("categoryid"));
+					newModel.setTitle(rs.getString("title"));
+
+					newModels.add(newModel);
+				}
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+
+				try {
+					if (rs != null) {
+						rs.close();
+					}
+					if (statement != null) {
+						statement.close();
+					}
+					if (conn != null) {
+						conn.close();
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+
+			}
+		}
+		return newModels;
+	}
+
+}

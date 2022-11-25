@@ -1,0 +1,5 @@
+package com.laptrinhjavawed.service.impl;
+
+public interface NewService {
+	
+}

@@ -1,0 +1,16 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import com.laptrinhjavawed.model.CategoryModel;
+import com.laptrinhjavawed.service.ICategoryService;
+
+public class CategoryService implements ICategoryService{
+
+	@Override
+	public List<CategoryModel> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.laptrinhjavawed.service.impl;
+
+import java.util.List;
+
+import com.laptrinhjavawed.model.NewModel;
+
+public interface INewService {
+	List<NewModel> findByCategoryId(long categoryId);
+}

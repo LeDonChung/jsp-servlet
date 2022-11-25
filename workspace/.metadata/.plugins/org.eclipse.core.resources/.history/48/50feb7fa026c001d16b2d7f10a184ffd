@@ -1,0 +1,14 @@
+package com.laptrinhjavawed.mapper;
+
+import java.sql.ResultSet;
+
+import com.laptrinhjavawed.model.NewModel;
+
+public class NewMapper implements RowMapper<NewModel> {
+
+	@Override
+	public NewModel mapRow(ResultSet rs) {
+		return null;
+	}
+
+}

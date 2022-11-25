@@ -1,0 +1,16 @@
+package com.laptrinhjavawed.dao.iml;
+
+import java.util.List;
+
+import com.laptrinhjavawed.dao.INewDAO;
+import com.laptrinhjavawed.model.NewModel;
+
+public class NewDAO implements INewDAO{
+	
+	@Override
+	public List<NewModel> findByCategoryId(long categoryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

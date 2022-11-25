@@ -1,0 +1,13 @@
+package com.laptrinhjavawed.mapper;
+
+import java.sql.ResultSet;
+
+public class CategoryMapper implements RowMapper<CategoryMapper>{
+
+	@Override
+	public CategoryMapper mapRow(ResultSet rs) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

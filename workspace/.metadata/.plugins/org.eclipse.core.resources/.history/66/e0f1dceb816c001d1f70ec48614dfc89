@@ -1,0 +1,7 @@
+package com.laptrinhjavawed.utils;
+
+public class HttpUtils {
+	public static HttpUltil of() {
+		
+	}
+}

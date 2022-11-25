@@ -1,0 +1,168 @@
+package com.laptrinhjavawed.dao.impl;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.laptrinhjavawed.dao.GenericDAO;
+import com.laptrinhjavawed.mapper.RowMapper;
+
+public class AbstractDAO<T> implements GenericDAO<T> {
+	public Connection getConnection() {
+		try {
+			// load driver
+			Class.forName("com.mysql.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/new_servlet";
+			String userName = "root";
+			String password = "01082003";
+			return DriverManager.getConnection(url, userName, password);
+
+		} catch (ClassNotFoundException e) {
+			return null;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			return null;
+		}
+	}
+
+	@Override
+	public List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters) {
+		List<T> results = new ArrayList<>();
+		Connection conn = getConnection();
+		PreparedStatement statement = null;
+		ResultSet rs = null;
+		if (conn != null) {
+			try {
+				statement = conn.prepareStatement(sql);
+				setParameter(statement, parameters);
+				rs = (ResultSet) statement.executeQuery();
+				while (rs.next()) {
+					results.add(rowMapper.mapRow(rs));
+				}
+				return results;
+			} catch (SQLException e) {
+
+			} finally {
+				try {
+					if (rs != null) {
+						rs.close();
+					}
+					if (statement != null) {
+						statement.close();
+					}
+					if (conn != null) {
+						conn.close();
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		}
+
+		return results;
+	}
+
+	private void setParameter(PreparedStatement statement, Object... parameters) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < parameters.length; i++) {
+			Object object = parameters[i];
+			int index = i + 1;
+			try {
+				if (object instanceof Long) {
+					statement.setLong(index, (long) object);
+				} else if (object instanceof String) {
+					statement.setString(index, (String) object);
+				}
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+	@Override
+	public Long insert(String sql, Object... parameters) {
+		Connection conn = getConnection();
+		PreparedStatement statement = null;
+
+		if (conn != null) {
+			try {
+				conn.setAutoCommit(false);
+				statement = conn.prepareStatement(sql);
+				setParameter(statement, parameters);
+				int rs = statement.executeUpdate();
+				conn.commit();
+				return (long) rs;
+			} catch (SQLException e) {
+				try {
+					conn.rollback();
+					e.printStackTrace();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+
+			} finally {
+				try {
+					if (statement != null) {
+						statement.close();
+					}
+					if (conn != null) {
+						conn.close();
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+		}
+
+		return null;
+	}
+
+	@Override
+	public void update(String sql, Object... parameters) {
+		Connection conn = getConnection();
+		PreparedStatement statement = null;
+
+		if (conn != null) {
+			try {
+				conn.setAutoCommit(false);
+				statement = conn.prepareStatement(sql);
+				setParameter(statement, parameters);
+				statement.executeUpdate();
+				conn.commit();
+			} catch (SQLException e) {
+				try {
+					conn.rollback();
+					e.printStackTrace();
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+
+			} finally {
+				try {
+					if (statement != null) {
+						statement.close();
+					}
+					if (conn != null) {
+						conn.close();
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+
+			}
+
+		}
+
+	}
+
+}
